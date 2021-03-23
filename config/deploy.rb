@@ -5,7 +5,7 @@ set :application, "test_app"
 set :repo_url, "https://github.com/Ismael-devTR/test_app.git"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-set :branch, "main"
+#set :branch, "main"
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/var/www/#{fetch :application}"
 
@@ -23,7 +23,7 @@ set :deploy_to, "/var/www/#{fetch :application}"
 # append :linked_files, "config/database.yml"
 
 # Default value for linked_dirs is []
- append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
